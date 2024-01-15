@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>6b6t.org 10K map (14/01/2024)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 10400px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        try {
+            var map = L.map('map').setView([0, 0], 2);
+            L.imageOverlay('https://i.yourimageshare.com/tTaEP8MIIw.png', 
+                [[-90, -180], [90, 180]]).addTo(map);
+        } catch (e) {
+            console.error(e);
+        }
+    });
+</script>
+
+</body>
+</html>
